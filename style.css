@@ -1,14 +1,13 @@
-
 /* Global Styles 
 ---------------------------------------*/
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 body {
@@ -72,12 +71,41 @@ header {
 .navbar-toggle span {
     height: 4px;
     width: 30px;
-    background-color: #ff6600;
+    background-color: #d20000;
     margin: 3px 0;
 }
 
+.navbar-close {
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 30px;
+    /* Increase the font size for a larger "x" */
+    line-height: 30px;
+    /* Match the line height to the font size */
+    color: #fff;
+    background-color: #d20000;
+    padding: 5px 10px;
+    border-radius: 50%;
+    transition: background-color 0.3s, color 0.3s;
+}
 
- /* Animations Section
+.navbar-close span {
+    height: 4px !important;
+    width: 30px !important;
+    margin: 3px 0;
+}
+
+.navbar-close:hover {
+    background-color: #fff;
+    /* Background color on hover */
+    color: #d20000;
+    /* Text color on hover */
+}
+
+/* Animations Section
   ---------------------------------------------*/
 .content-wrap {
     max-width: 800px;
@@ -87,14 +115,17 @@ header {
 }
 
 h2 {
-font-family: 'Young Serif', serif;
-font-weight: 400;
-margin: 0;
+    font-family: 'Young Serif', serif;
+    font-weight: 400;
+    margin: 0;
 }
+
 /* Animation Section Styles */
 #animations {
-    background-color: #f7f7f7; /* Add a background color to distinguish the section */
-    padding: 40px 0; /* Add some padding for spacing */
+    background-color: #f7f7f7;
+    /* Add a background color to distinguish the section */
+    padding: 40px 0;
+    /* Add some padding for spacing */
 
     /* Center the content */
     display: flex;
@@ -104,21 +135,28 @@ margin: 0;
 }
 
 #animations h2 {
-    font-size: 36px; /* Increase the font size for the section title */
-    margin-bottom: 20px; /* Add some space below the title */
+    font-size: 36px;
+    /* Increase the font size for the section title */
+    margin-bottom: 20px;
+    /* Add some space below the title */
 }
 
 /* Center the SVG image */
 #animations svg {
-    width: 100%; /* Make the SVG fill the container width */
-    max-width: 600px; /* Limit the maximum width of the SVG */
+    width: 100%;
+    /* Make the SVG fill the container width */
+    max-width: 600px;
+    /* Limit the maximum width of the SVG */
 }
 
 
 /* Add some space to the text and path animations */
-#textPath, text {
-    margin-top: 20px; /* Space between the text and the strawberry */
+#textPath,
+text {
+    margin-top: 20px;
+    /* Space between the text and the strawberry */
 }
+
 /* Path animation styles */
 path {
     fill: transparent;
@@ -147,21 +185,27 @@ text {
     0% {
         fill: black;
     }
+
     14% {
         fill: red;
     }
+
     28% {
         fill: blue;
     }
+
     42% {
         fill: green;
     }
+
     57% {
         fill: orange;
     }
+
     71% {
         fill: purple;
     }
+
     85% {
         fill: black;
     }
@@ -169,7 +213,8 @@ text {
 
 /* Strawberry.svg image styles */
 #strawberry {
-    transform-origin: center;/* Adjust the position of the strawberry image */
+    transform-origin: center;
+    /* Adjust the position of the strawberry image */
     animation: rotate 4s linear infinite;
 }
 
@@ -177,22 +222,26 @@ text {
     0% {
         transform: rotate(0deg);
     }
+
     100% {
         transform: rotate(360deg);
     }
 }
+
 /* Footer Styles */
 footer {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
 }
+
 .footer-bottom {
     background-color: #333;
     color: #fff;
     padding: 20px 0;
     text-align: center;
 }
+
 /* Media Query for Responsive Navbar */
 @media (max-width: 768px) {
     .navbar-links {
@@ -215,10 +264,14 @@ footer {
     .navbar-toggle {
         display: flex;
     }
+
     #animations {
-        padding: 20px 0; /* Adjust padding for smaller screens */
+        padding: 20px 0;
+        /* Adjust padding for smaller screens */
     }
+
     #animations h2 {
-        font-size: 28px; /* Reduce font size for smaller screens */
+        font-size: 28px;
+        /* Reduce font size for smaller screens */
     }
 }

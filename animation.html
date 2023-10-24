@@ -11,6 +11,26 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Montserrat&family=Young+Serif&display=swap"
         rel="stylesheet" />
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var menuToggle = document.getElementById("menu-toggle");
+            var menuClose = document.getElementById("menu-close");
+            var navbarLinks = document.querySelector(".navbar-links");
+
+            if (menuToggle && menuClose && navbarLinks) {
+                menuToggle.addEventListener("click", function () {
+                    navbarLinks.classList.toggle("active");
+                    menuToggle.style.display = "none"; // hide the toggle button
+                    menuClose.style.display = "block"; // Show the close button
+                });
+
+                menuClose.addEventListener("click", function () {
+                    navbarLinks.classList.remove("active");
+                    menuClose.style.display = "none"; // hide the close button
+                });
+            }
+        });
+    </script>
 </head>
 
 <body>
@@ -25,10 +45,13 @@
                     <li><a href="#animation">Animation</a></li>
                 </ul>
             </div>
-            <div class="navbar-toggle">
+            <div class="navbar-toggle" id="menu-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
+            </div>
+            <div class="navbar-close" id="menu-close">
+                <span>&times;</span>
             </div>
         </nav>
     </header>
@@ -45,7 +68,8 @@
                     <text font-family="Caveat, cursive" font-size="24" fill="black">
                         <textPath href="#textPath" startOffset="10%">
                             I Love Strawberries
-                            <animate attributeName="fill" values="black; red; blue; green; orange; purple; black" dur="4s" repeatCount="indefinite" />
+                            <animate attributeName="fill" values="black; red; blue; green; orange; purple; black"
+                                dur="4s" repeatCount="indefinite" />
                         </textPath>
                     </text>
                     <!-- Path for the text animation -->
@@ -55,7 +79,7 @@
             </div>
         </section>
     </main>
-    <footer>       
+    <footer>
         <div class="footer-bottom">
             &copy; 2023 DGL 203. All rights reserved.
         </div>
