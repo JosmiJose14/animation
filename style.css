@@ -42,7 +42,7 @@ header {
 }
 
 .navbar-logo a:hover {
-    color: #ff6600;
+    color: #d20000;
 }
 
 .navbar-links ul {
@@ -59,7 +59,7 @@ header {
 }
 
 .navbar-links a:hover {
-    color: #ff6600;
+    color: #d20000;
 }
 
 /* Responsive Navbar */
@@ -83,13 +83,103 @@ header {
     max-width: 800px;
     width: 85%;
     margin: 0 auto;
-    padding: 70px 0;
+    padding: 20px 0;
 }
 
 h2 {
 font-family: 'Young Serif', serif;
 font-weight: 400;
 margin: 0;
+}
+/* Animation Section Styles */
+#animations {
+    background-color: #f7f7f7; /* Add a background color to distinguish the section */
+    padding: 40px 0; /* Add some padding for spacing */
+
+    /* Center the content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#animations h2 {
+    font-size: 36px; /* Increase the font size for the section title */
+    margin-bottom: 20px; /* Add some space below the title */
+}
+
+/* Center the SVG image */
+#animations svg {
+    width: 100%; /* Make the SVG fill the container width */
+    max-width: 600px; /* Limit the maximum width of the SVG */
+}
+
+
+/* Add some space to the text and path animations */
+#textPath, text {
+    margin-top: 20px; /* Space between the text and the strawberry */
+}
+/* Path animation styles */
+path {
+    fill: transparent;
+    stroke: blue;
+    stroke-width: 3;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 5s linear alternate infinite;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+/* Text animation styles */
+text {
+    font-family: 'Caveat', cursive;
+    font-size: 24px;
+    fill: black;
+    animation: colorChange 4s infinite;
+}
+
+@keyframes colorChange {
+    0% {
+        fill: black;
+    }
+    14% {
+        fill: red;
+    }
+    28% {
+        fill: blue;
+    }
+    42% {
+        fill: green;
+    }
+    57% {
+        fill: orange;
+    }
+    71% {
+        fill: purple;
+    }
+    85% {
+        fill: black;
+    }
+}
+
+/* Strawberry.svg image styles */
+#strawberry {
+    transform-origin: center;/* Adjust the position of the strawberry image */
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 /* Footer Styles */
 footer {
@@ -124,5 +214,11 @@ footer {
 
     .navbar-toggle {
         display: flex;
+    }
+    #animations {
+        padding: 20px 0; /* Adjust padding for smaller screens */
+    }
+    #animations h2 {
+        font-size: 28px; /* Reduce font size for smaller screens */
     }
 }
