@@ -2,8 +2,16 @@
 
 TABLE OF CONTENTS
 */
+/* 1. Global Styles  */
+/* 2.Header Styles  */
+/* 3.Animations Section */
+/* 4.Path animation styles  */
+/* 5.Text animation styles  */
+/* 6.Strawberry.svg image styles  */
+/* 7.Footer Styles */
+/* 8.Media query for responsive design */
 
-/* Global Styles 
+/* 1.Global Styles 
 ---------------------------------------*/
 html {
     box-sizing: border-box;
@@ -21,7 +29,7 @@ body {
     padding: 0; 
 }
     
-/* Header Styles 
+/* 2.Header Styles 
 ---------------------------------------*/
 header {
     background-color: #333;
@@ -75,7 +83,7 @@ a:hover {
     border-bottom: 2px solid #ffffff;
 }
 
-/* Animations Section
+/* 3. Animations Section
   ---------------------------------------------*/
 .content-wrap {
     max-width: 800px;
@@ -90,8 +98,6 @@ h2 {
     margin: 0;
 }
 
-/* Animation Section Styles 
----------------------------------------*/
 #animations {
     background-color: #f7f7f7;
     /* Add a background color to distinguish the section */
@@ -128,7 +134,7 @@ text {
     /* Space between the text and the strawberry */
 }
 
-/* Path animation styles 
+/* 4.Path animation styles 
 ---------------------------------------*/
 path {
     fill: transparent;
@@ -145,7 +151,7 @@ path {
     }
 }
 
-/* Text animation styles 
+/* 5.Text animation styles 
 ---------------------------------------*/
 text {
     font-family: 'Caveat', cursive;
@@ -184,7 +190,7 @@ text {
     }
 }
 
-/* Strawberry.svg image styles 
+/* 6.Strawberry.svg image styles 
 ---------------------------------------*/
 #strawberry {
     transform-origin: center;
@@ -202,7 +208,7 @@ text {
     }
 }
 
-/* Footer Styles 
+/* 7.Footer Styles 
 ---------------------------------------*/
 footer {
     background-color: #333;
@@ -218,7 +224,7 @@ footer {
     flex-shrink: 0; /* Prevent footer from shrinking */
 }
 
-/* Media Query for Responsive Navbar
+/* 8.Media query for responsive design
 ---------------------------------------*/
 @media (max-width: 768px) {
     label {
