@@ -10,50 +10,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Montserrat&family=Young+Serif&display=swap"
-        rel="stylesheet" />
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            var menuToggle = document.getElementById("menu-toggle");
-            var menuClose = document.getElementById("menu-close");
-            var navbarLinks = document.querySelector(".navbar-links");
-
-            if (menuToggle && menuClose && navbarLinks) {
-                menuToggle.addEventListener("click", function () {
-                    navbarLinks.classList.toggle("active");
-                    menuToggle.style.display = "none"; // hide the toggle button
-                    menuClose.style.display = "block"; // Show the close button
-                });
-
-                menuClose.addEventListener("click", function () {
-                    navbarLinks.classList.remove("active");
-                    menuClose.style.display = "none"; // hide the close button
-                });
-            }
-        });
-    </script>
+        rel="stylesheet" />   
+        <!-- Font Awesome Icons -->
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
 
 <body>
     <header>
-        <nav class="navbar">
-            <div class="navbar-logo">
-                <a href="index.html">Josmi Jose</a>
-            </div>
-            <div class="navbar-links">
-                <ul>
-                    <li><a href="#motion">Motion</a></li>
-                    <li><a href="#animation">Animation</a></li>
-                </ul>
-            </div>
-            <div class="navbar-toggle" id="menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="navbar-close" id="menu-close">
-                <span>&times;</span>
-            </div>
-        </nav>
+        <!-- Implemented navbar from https://www.youtube.com/watch?v=qKqLMlBKHlE -->
+        <nav>
+            <a href="#home" id="logo">Josmi Jose</a>
+            <input type="checkbox" id="hamburger" />
+            <label for="hamburger">
+              <i class="fa-solid fa-bars"></i>
+            </label>
+            <ul>
+              <li>
+                <a href="#" class="active">Animations</a>
+              </li>
+              <li>
+                <a href="#">Motions</a>
+              </li>
+             </ul>
+          </nav>
     </header>
     <main>
         <section id="animations">

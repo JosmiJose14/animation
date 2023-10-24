@@ -2,6 +2,7 @@
 ---------------------------------------*/
 html {
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 }
 
 *,
@@ -12,8 +13,7 @@ html {
 
 body {
     margin: 0;
-    padding: 0;
-    font-family: "Montserrat", sans-serif;
+    padding: 0; 
 }
 
 /* Header Styles */
@@ -23,88 +23,43 @@ header {
     padding: 10px 0;
 }
 
-.navbar {
+nav {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.navbar-logo a {
+    justify-content: space-between;
+    padding: 1em;
+  }
+  nav a {
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-size: 24px;
-    transition: color 0.3s;
-}
-
-.navbar-logo a:hover {
-    color: #d20000;
-}
-
-.navbar-links ul {
+    text-transform: capitalize;
+    color: #ffffff;
+  }
+  #logo {
+    font-size: 1.2em;
+    font-weight: 600;
+  }
+  input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  label {
+    display: none;
+    cursor: pointer;
+  }
+  ul {
     list-style: none;
     display: flex;
-    gap: 20px;
-}
-
-.navbar-links a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.navbar-links a:hover {
+    gap: 1em;
+  }
+  ul a {
+    padding: 0.5em;
+  }
+ a:hover {
     color: #d20000;
-}
-
-/* Responsive Navbar */
-.navbar-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.navbar-toggle span {
-    height: 4px;
-    width: 30px;
-    background-color: #d20000;
-    margin: 3px 0;
-}
-
-.navbar-close {
-    display: none;
-    cursor: pointer;
-    position: absolute;
-    top: 5px;
-    right: 20px;
-    font-size: 30px;
-    /* Increase the font size for a larger "x" */
-    line-height: 30px;
-    /* Match the line height to the font size */
-    color: #fff;
-    background-color: #d20000;
-    padding: 5px 10px;
-    border-radius: 50%;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.navbar-close span {
-    height: 4px !important;
-    width: 30px !important;
-    margin: 3px 0;
-}
-
-.navbar-close:hover {
-    background-color: #fff;
-    /* Background color on hover */
-    color: #d20000;
-    /* Text color on hover */
-}
-
+  }
+  .active {
+    border-bottom: 2px solid #ffffff;
+  }
 /* Animations Section
   ---------------------------------------------*/
 .content-wrap {
@@ -124,7 +79,7 @@ h2 {
 #animations {
     background-color: #f7f7f7;
     /* Add a background color to distinguish the section */
-    padding: 40px 0;
+    padding: 20px 0;
     /* Add some padding for spacing */
 
     /* Center the content */
@@ -232,7 +187,6 @@ text {
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
 }
 
 .footer-bottom {
@@ -244,26 +198,29 @@ footer {
 
 /* Media Query for Responsive Navbar */
 @media (max-width: 768px) {
-    .navbar-links {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
+    label {
+        display: block;
+      }
+      ul {
+        font-size: 1.2em;
         position: absolute;
-        top: 60px;
-    }
-
-    .navbar-links ul {
+        left: -100%;
         flex-direction: column;
-    }
-
-    .navbar-links.active {
-        display: flex;
-    }
-
-    .navbar-toggle {
-        display: flex;
-    }
+        align-items: center;
+        justify-content: center;
+        background-color: #333;
+        gap: 2em;
+        top: 60px;
+        width: 100%;
+        height: calc(100vh - 60px);
+        transition: 0.5s;
+      }
+      input[type="checkbox"]:checked ~ ul {
+        left: 0;
+      }
+      ul a:hover {
+       color: #d20000;
+      }
 
     #animations {
         padding: 20px 0;
